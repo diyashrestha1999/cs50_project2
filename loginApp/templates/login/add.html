@@ -1,0 +1,10 @@
+{% extends 'login/layout.html'%}
+{%block body%}
+<h1>New Login</h1>
+<form action="{%url 'signup:add'%}" method="POST">
+    {% csrf_token %}
+{{add_form}}
+<button type="submit" name="submit_button">Submit</button>
+</form>
+<a href="{% url 'signup:index'%}">Back To User Details</a>
+{%endblock%}

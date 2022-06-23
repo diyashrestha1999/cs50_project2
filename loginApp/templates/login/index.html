@@ -1,0 +1,23 @@
+{% extends 'login/layout.html'%}
+{%block body%}
+    <h1>Login Informations</h1>
+    <table>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        <tr>
+            {%for i in "display_username%}
+            <td>{{i}}</td>
+            {%endfor}
+            {%for i in "display_useremail%}
+            <td>{{i}}</td>
+            {%endfor}
+            {%for i in "display_password%}
+            <td>{{i}}</td>
+            {%endfor}
+        </tr>
+    </table>
+    <a href="{% url 'signup:add'%}">Go To LogIn Form</a>
+{%endblock%}
